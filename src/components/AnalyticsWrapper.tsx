@@ -19,7 +19,7 @@ const AnalyticsWrapper = () => {
     };
 
     window.addEventListener('analytics-consent-given', handleConsent);
-    
+
     return () => {
       window.removeEventListener('analytics-consent-given', handleConsent);
     };

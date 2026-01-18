@@ -34,22 +34,14 @@ const ConsentBanner = () => {
         <div className="text-text-primary">
           <p className="font-medium">We value your privacy</p>
           <p className="text-sm text-text-secondary mt-1">
-            We use analytics cookies to understand how you use our site and improve your experience. 
-            You can opt-out at any time.
+            We use analytics cookies to understand how you use our site and improve your experience. You can opt-out at any time.
           </p>
         </div>
         <div className="flex gap-3">
-          <Button 
-            onClick={handleReject}
-            variant="outline"
-            className="px-4 py-2"
-          >
+          <Button onClick={handleReject} variant="outline" className="px-4 py-2">
             Reject
           </Button>
-          <Button 
-            onClick={handleAccept}
-            className="px-4 py-2 text-white"
-          >
+          <Button onClick={handleAccept} className="px-4 py-2 text-white">
             Accept
           </Button>
         </div>
