@@ -7,11 +7,6 @@ import ConsentBanner from "@/components/ConsentBanner";
 import AnalyticsWrapper from "@/components/AnalyticsWrapper";
 import { CookiesProvider } from 'react-cookie';
 
-export const metadata: Metadata = {
-  title: "Dyad Framework",
-  description: "Build stunning web applications with AI assistance",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
