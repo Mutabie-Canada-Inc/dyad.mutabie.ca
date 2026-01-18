@@ -8,6 +8,15 @@ const nextConfig = {
   },
   experimental: {
     appDir: true
+  },
+  // Enable static exports for better Vercel performance
+  output: 'export',
+  // Disable server-side features we don't need
+  serverComponentsExternalPackages: [],
+  // Optimize for production
+  compiler: {
+    styledComponents: true,
+    emotion: true
   }
 }
 
