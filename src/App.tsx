@@ -1,15 +1,20 @@
-import type { AppProps } from 'next/app';
-import { Toaster } from 'react-hot-toast';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 import ConsentBanner from "./components/ConsentBanner";
 import AnalyticsWrapper from "./components/AnalyticsWrapper";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <AnalyticsWrapper />
-      <ConsentBanner />
-      <Toaster />
-    </>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/about" element={<About />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+    <AnalyticsWrapper />
+    <ConsentBanner />
+  </BrowserRouter>
+);
+
+export default App;
